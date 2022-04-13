@@ -12,6 +12,7 @@ class LoginView: UIView{
     let userNameTextField = UITextField()
     let passwordTextField = UITextField()
     let stack = UIStackView()
+    let divider = UIView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,11 +43,18 @@ extension LoginView{
         passwordTextField.placeholder = "Password"
         passwordTextField.delegate = self
         passwordTextField.isSecureTextEntry = true
+        
+        divider.translatesAutoresizingMaskIntoConstraints = false
+        divider.backgroundColor = .secondarySystemFill
+        
+        layer.cornerRadius = 10
+        clipsToBounds = true
     }
     func layout(){
         stack.addArrangedSubview(userNameTextField)
+        stack.addArrangedSubview(divider)
         stack.addArrangedSubview(passwordTextField)
-        backgroundColor = .purple
+       backgroundColor = .red
         addSubview(stack)
         
         NSLayoutConstraint.activate([
@@ -55,6 +63,8 @@ extension LoginView{
             trailingAnchor.constraint(equalToSystemSpacingAfter: stack.trailingAnchor, multiplier: 1),
             bottomAnchor.constraint(equalToSystemSpacingBelow: stack.bottomAnchor, multiplier: 1)
         ])
+        
+        divider.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
 }
 
