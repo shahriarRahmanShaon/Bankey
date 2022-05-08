@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class LoginView: UIView{
+    
     let userNameTextField = UITextField()
     let passwordTextField = UITextField()
     let stack = UIStackView()
@@ -33,7 +34,7 @@ extension LoginView{
         translatesAutoresizingMaskIntoConstraints = false
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
-        stack.spacing = 8
+        stack.spacing = 10
         
         userNameTextField.translatesAutoresizingMaskIntoConstraints = false
         userNameTextField.placeholder = "Username"
@@ -54,7 +55,7 @@ extension LoginView{
         stack.addArrangedSubview(userNameTextField)
         stack.addArrangedSubview(divider)
         stack.addArrangedSubview(passwordTextField)
-       backgroundColor = .red
+        backgroundColor = .secondarySystemBackground
         addSubview(stack)
         
         NSLayoutConstraint.activate([
@@ -64,7 +65,7 @@ extension LoginView{
             bottomAnchor.constraint(equalToSystemSpacingBelow: stack.bottomAnchor, multiplier: 1)
         ])
         
-        divider.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        divider.heightAnchor.constraint(equalToConstant: 2).isActive = true
     }
 }
 
