@@ -87,6 +87,12 @@ extension LoginViewController{
         }
         if username.isEmpty || password.isEmpty{
             configureView(withMessage: "Username and Password can never be empty")
+            return 
+        }
+        if username == "segio" && password == "ungabunga"{
+            signInButton.configuration?.showsActivityIndicator = true
+        }else{
+            configureView(withMessage: "Incorrect credentials")
         }
     }
     private func configureView(withMessage message: String){
