@@ -15,6 +15,7 @@
 		003E1AAB2806C4D2004DEE9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003E1AAA2806C4D2004DEE9E /* Assets.xcassets */; };
 		003E1AAE2806C4D2004DEE9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003E1AAC2806C4D2004DEE9E /* LaunchScreen.storyboard */; };
 		003E1AB82806C848004DEE9E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003E1AB72806C848004DEE9E /* LoginView.swift */; };
+		00681ADC282E97200014CCC7 /* AccountSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00681ADB282E97200014CCC7 /* AccountSummaryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		003E1AAD2806C4D2004DEE9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		003E1AAF2806C4D2004DEE9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		003E1AB72806C848004DEE9E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		00681ADB282E97200014CCC7 /* AccountSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,12 +78,13 @@
 		003E1AA02806C4D0004DEE9E /* Bankey */ = {
 			isa = PBXGroup;
 			children = (
+				003E1AA12806C4D0004DEE9E /* AppDelegate.swift */,
+				002033AA2829267D003E6EF5 /* MainViewController.swift */,
 				002033A7282923DD003E6EF5 /* Util */,
 				000E677628281F2700E9347C /* Onboarding */,
 				003E1AB52806C7CE004DEE9E /* Files */,
 				003E1AB62806C81A004DEE9E /* Login */,
-				003E1AA12806C4D0004DEE9E /* AppDelegate.swift */,
-				002033AA2829267D003E6EF5 /* MainViewController.swift */,
+				00681ADA282E96B70014CCC7 /* AccountSummary */,
 			);
 			path = Bankey;
 			sourceTree = "<group>";
@@ -103,6 +106,14 @@
 				003E1AB72806C848004DEE9E /* LoginView.swift */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		00681ADA282E96B70014CCC7 /* AccountSummary */ = {
+			isa = PBXGroup;
+			children = (
+				00681ADB282E97200014CCC7 /* AccountSummaryViewController.swift */,
+			);
+			path = AccountSummary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00681ADC282E97200014CCC7 /* AccountSummaryViewController.swift in Sources */,
 				003E1AB82806C848004DEE9E /* LoginView.swift in Sources */,
 				003E1AA62806C4D0004DEE9E /* LoginViewController.swift in Sources */,
 				002033A9282923F8003E6EF5 /* UiViewController+Utils.swift in Sources */,
