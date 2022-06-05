@@ -53,8 +53,13 @@ extension LoginViewController{
         // Login view constraints
         NSLayoutConstraint.activate([
             loginView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 3),
-            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 3)
+//            loginView.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 3),
+//            view.trailingAnchor.constraint(equalToSystemSpacingAfter: loginView.trailingAnchor, multiplier: 3)
+            loginView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            loginView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+            
+            // it works in both the ways.. hurrah, try any of those
+            
         ])
         // singIn button constratint
         NSLayoutConstraint.activate([
@@ -89,7 +94,7 @@ extension LoginViewController{
             configureView(withMessage: "Username and Password can never be empty")
             return 
         }
-        if username == "segio" && password == "ungabunga"{
+        if username == "Sergio" && password == "Ungabunga"{
             signInButton.configuration?.showsActivityIndicator = true
         }else{
             configureView(withMessage: "Incorrect credentials")
@@ -101,4 +106,5 @@ extension LoginViewController{
     }
 
 }
+
 
